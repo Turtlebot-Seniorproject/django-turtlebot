@@ -6,7 +6,8 @@ def establish_connection_and_send_destination(location_id=None, ip=None):
     if ip:
         host = ip
     else:
-        host = "192.168.1.6"
+        host = "127.0.0.1"
+    print host
     port = 10888
     s.connect((host, port))
     if s.recv(1024) == "Connection established":

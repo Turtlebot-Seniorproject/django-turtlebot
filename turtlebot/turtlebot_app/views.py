@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from . import turtlebot_adaptors
-import csu_constants
 
 
 def home(request):
@@ -15,6 +14,8 @@ def _get_named_rooms(location_id=None):
     if location_id:
         if location_id == "Foxes Den":
             return "130"
+	else:
+	    return location_id
         #add other room definitions here.
         #this could be a dictionary but I would like to add user-auth
     else:
